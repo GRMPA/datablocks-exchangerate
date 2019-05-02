@@ -1,3 +1,3 @@
-connection: "snowflake-datablocks"
+connection: "looker_datablocks"
 
 include: "snowflake.explore"
