@@ -15,7 +15,7 @@ view: sf_forex_historical_real {
         forex.USD_CAD  AS USD_CAD,
         forex.USD_CHF  AS USD_CHF,
         forex.USD_JPY  AS USD_JPY
-      FROM exchangerate.forex  AS forex
+      FROM looker_datablocks.exchangerate.forex  AS forex
       UNION ALL
       SELECT
         cast(forex_real.exchange_date as timestamp) AS forex_exchange_date,
@@ -32,7 +32,7 @@ view: sf_forex_historical_real {
         forex_real.CAD *(1/forex_real.USD) AS USD_CAD,
         forex_real.CHF *(1/forex_real.USD) AS USD_CHF,
         forex_real.JPY *(1/forex_real.USD) AS USD_JPY
-      FROM exchangerate.forex_real  AS forex_real
+      FROM looker_datablocks.exchangerate.forex_real  AS forex_real
        ;;
     datagroup_trigger: default
   }

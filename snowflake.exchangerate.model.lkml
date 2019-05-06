@@ -1,3 +1,3 @@
-connection: "looker_datablocks"
+connection: "fivetran"
 
 include: "snowflake.explore"
